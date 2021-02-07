@@ -47,7 +47,7 @@
             </v-btn>
           </v-col>
         </v-toolbar-items>
-        <v-toolbar-items class="hidden-sm-and-up">
+        <v-toolbar-items class="hidden-md-and-up">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         </v-toolbar-items>
       </v-row>
