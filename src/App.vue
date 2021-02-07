@@ -1,5 +1,29 @@
 <template>
   <v-app>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      right
+      temporary
+    >
+      <v-list
+      rounded>
+        <v-list-item
+          v-for="item in menu"
+          :key="item.link"
+          :to="item.root"
+          link
+        >
+          <v-list-item-icon class="text-button text-center">
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title class="text-button text-left">{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     <v-app-bar
       color="white"
       height="70"
@@ -22,6 +46,9 @@
               {{ item.title }}
             </v-btn>
           </v-col>
+        </v-toolbar-items>
+        <v-toolbar-items class="hidden-sm-and-up">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         </v-toolbar-items>
       </v-row>
     </v-app-bar>
@@ -104,6 +131,7 @@ export default {
       {icon: 'mdi-github', link: "https://github.com/ZioTrib"}
 
     ],
+    drawer: false,
   }),
 };
 </script>
