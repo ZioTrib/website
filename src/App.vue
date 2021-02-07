@@ -1,23 +1,33 @@
 <template>
   <v-app>
-    <div>
-      <v-toolbar>
+    <v-app-bar
+      color="white"
+      height="70"
+    >
+      <v-row
+        align="center"
+      >
         <v-toolbar-title>Daniele Tribuzio</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-col v-for="item in menu" :key="item.link">
+          <v-col v-for="item in menu" :key="item.link"
+          >
             <v-btn
-              color="normal"
-              plain
+              color="terziario"
+              text
+              rounded
+              flat
               :to="item.root">
               <v-icon class=mr-2> {{ item.icon }}</v-icon>
               {{ item.title }}
             </v-btn>
           </v-col>
         </v-toolbar-items>
-      </v-toolbar>
-    </div>
-    <router-view/>
+      </v-row>
+    </v-app-bar>
+    <v-content>
+      <router-view/>
+    </v-content>
     <v-footer>
       <v-card
         flat
@@ -100,6 +110,7 @@ export default {
 
 
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
