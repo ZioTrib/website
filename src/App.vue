@@ -1,13 +1,14 @@
 <template>
   <v-app>
-    <v-navigation-drawer
+   <v-navigation-drawer
       v-model="drawer"
-      absolute
+      relative
       right
+      app
       temporary
     >
       <v-list
-      rounded>
+        rounded>
         <v-list-item
           v-for="item in menu"
           :key="item.link"
@@ -48,7 +49,7 @@
           </v-col>
         </v-toolbar-items>
         <v-toolbar-items class="hidden-md-and-up">
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         </v-toolbar-items>
       </v-row>
     </v-app-bar>
@@ -132,8 +133,15 @@ export default {
 
     ],
     drawer: false,
+    group: null,
   }),
+  watch: {
+    group () {
+      this.drawer = false
+    },
+  },
 };
+
 </script>
 
 
