@@ -9,6 +9,8 @@
     >
       <v-list
         rounded>
+        <v-list-item-group v-model="group"
+        active-class="terziario--text">
         <v-list-item
           v-for="item in menu"
           :key="item.link"
@@ -23,6 +25,7 @@
             <v-list-item-title class="text-button text-left">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
