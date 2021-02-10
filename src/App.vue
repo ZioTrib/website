@@ -1,6 +1,6 @@
 <template>
   <v-app>
-   <v-navigation-drawer
+    <v-navigation-drawer
       v-model="drawer"
       relative
       right
@@ -10,21 +10,21 @@
       <v-list
         rounded>
         <v-list-item-group v-model="group"
-        active-class="terziario--text">
-        <v-list-item
-          v-for="item in menu"
-          :key="item.link"
-          :to="item.root"
-          link
-        >
-          <v-list-item-icon class="text-button text-center">
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+                           active-class="terziario--text">
+          <v-list-item
+            v-for="item in menu"
+            :key="item.link"
+            :to="item.root"
+            link
+          >
+            <v-list-item-icon class="text-button text-center">
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title class="text-button text-left">{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content>
+              <v-list-item-title class="text-button text-left">{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -59,58 +59,83 @@
     <v-content>
       <router-view/>
     </v-content>
-    <v-footer>
-      <v-card
-        flat
-        tile
-        class="normal text-center"
-      >
-        <v-row>
-          <v-card-text>
-            <h2>Follow Me</h2>
-            <v-btn
-              v-for="icon in icons"
-              :key="icon.icon"
-              class="mx-4 my-4"
-              icon
-              :href="icon.link"
-              target="_blank">
-              <v-icon size="40px">
-                {{ icon.icon }}
-              </v-icon>
-            </v-btn>
-            <v-divider></v-divider>
-          </v-card-text>
-          <v-col>
-            <v-card-text class=" pt-0">
-              <h3>
-                About this website
-              </h3>
-              Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum.
-              Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim
-              a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat
-              augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor
-              vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class=" pt-0">
-              <h3>
-                Site links
-              </h3>
-              Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum.
-              Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim
-              a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat
-              augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor
-              vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus
-            </v-card-text>
-          </v-col>
-        </v-row>
-        <v-divider></v-divider>
-        <v-card-text class="">
-          © {{ new Date().getFullYear() }} <strong>Daniele Tribuzio </strong> All rights reserved
-        </v-card-text>
-      </v-card>
+
+
+    <v-footer
+      padless
+      color="white"
+    >
+      <v-row style="margin-top: 10px">
+        <v-col
+          xl="2"
+        lg="2"
+        md="6"
+        sm="5"
+        xs="5">
+          <div class="font-weight-thin black--text text-subtitle-2 text-center">
+            <strong> Contact me </strong>
+          </div>
+          <v-btn
+            icon
+            color="terziario"
+            href="mailto:Tribuzio.Daniele@gmail.com"
+            target="_blank">
+            <v-icon size="20px">
+              mdi-email-edit-outline
+           </v-icon>
+          </v-btn>
+          <v-btn
+            icon
+            color="terziario"
+            target="_blank"
+            href="https://t.me/DanieleTribuzio"
+          >
+            <v-icon size="20px">
+              mdi-telegram
+            </v-icon>
+          </v-btn>
+        </v-col>
+        <v-spacer class="hidden-sm-and-down"></v-spacer>
+        <v-col
+          xl="2"
+          lg="2"
+          md="6"
+          sm="7"
+          xs="7"
+        >
+          <div class="font-weight-thin black--text text-subtitle-2 text-center">
+            <strong>Follow me</strong> <br>
+          </div>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon.icon"
+            icon
+            color="terziario"
+            :href="icon.link"
+            target="_blank">
+            <v-icon size="20px">
+              {{ icon.icon }}
+            </v-icon>
+          </v-btn>
+        </v-col>
+        <v-col
+          class="text-center"
+          cols="12"
+        >
+          <div class="font-weight-thin black--text text-subtitle-2 text-center">
+            © {{ new Date().getFullYear() }} <strong> Daniele Tribuzio </strong> All rights reserved
+          </div>
+          <div class=" mt-2 font-weight-thin black--text text-subtitle-2 text-center">
+            This website is built entirely using the <strong> Vue.js framework</strong> and the <strong>Vuetify.js framework</strong>.
+          </div>
+          <v-icon>
+            mdi-vuejs
+          </v-icon>
+          <v-icon>
+            mdi-vuetify
+          </v-icon>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -139,7 +164,7 @@ export default {
     group: null,
   }),
   watch: {
-    group () {
+    group() {
       this.drawer = false
     },
   },
