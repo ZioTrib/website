@@ -19,13 +19,13 @@
         <div
           class="text-h5 font-weight-thin mt-10 mx-5"
         >
-          I'm looking for new opportunities and I am willing to accept any challenge. <br>
+          I'm looking for <strong> new opportunities </strong> and I am willing to <strong> accept any challenge </strong>. <br>
           If you are interested, my inbox is always open!
         </div>
-        <v-btn class="my-10"
+        <v-btn class="mx-2 my-10"
                rounded
                dark
-               x-large
+               large
                color="terziario"
                href="mailto:Tribuzio.Daniele@gmail.com"
 
@@ -34,6 +34,19 @@
             mdi-email-edit-outline
           </v-icon>
           Send me an E-mail
+        </v-btn>
+        <v-btn class="mx-2 my-10"
+               rounded
+               large
+               dark
+               color="terziario"
+               href="https://t.me/DanieleTribuzio"
+
+        >
+          <v-icon class=mr-2>
+            mdi-telegram
+          </v-icon>
+          Send me a message
         </v-btn>
         <v-card-actions
           class="terziario justify-center">
