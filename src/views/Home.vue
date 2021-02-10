@@ -1,7 +1,7 @@
 <template>
   <v-parallax
     :src="require('@/assets/background.png')"
-  :height="height">
+    :height="height">
     <v-row
       justify="center"
       style="margin-top: 5%"
@@ -28,7 +28,8 @@
                 >
               </v-avatar>
               <div class="text-h4 font-weight-thin">
-                Daniele <br> Tribuzio</div>
+                Daniele <br> Tribuzio
+              </div>
               <hr style="
                height:2px;
                 width:15%;
@@ -45,7 +46,7 @@
                 style="
                margin-top: 20px;
                margin-bottom: 20px;">
-                Data Scientist
+                Data Science Student
               </div>
 
             </v-col>
@@ -82,15 +83,18 @@
           <div
             class=
               "text-lg-h1 text-md-h1 text-h2">
-            Hello</div>
+            Hello
+          </div>
           <div class="text-h5 font-weight-thin">
-            Here's who I am&nbsp;&amp; what I do</div>
+            Here's who I am&nbsp;&amp; what I do
+          </div>
 
           <v-btn class="my-5 mr-5 my-lg-5"
                  rounded
                  color="terziario"
                  dark
                  large
+                 to="/portfolio"
           >
             Portfolio
           </v-btn>
@@ -98,7 +102,7 @@
                  rounded
                  outlined
                  color="terziario"
-
+                 to="/about"
                  large
           >
             About Me
@@ -106,13 +110,14 @@
 
           <div
             :class=
-                 "[`text-lg-body-1 text-justify text-md-body-1 text-body-1 ${color} mb-10`]">
+              "[`text-lg-body-1 text-justify text-md-body-1 text-body-1 ${color} mb-10`]">
             I'm a paragraph. Click here to add your own text and edit me.
             It’s easy. Just click “Edit Text” or double click me to add your
             own content and make changes to the font.
             I'm a paragraph. Click here to add your own text and edit me.
             It’s easy. Just click “Edit Text” or double click me to add your
-            own content and make changes to the font.</div>
+            own content and make changes to the font.
+          </div>
         </v-card>
       </v-col>
     </v-row>
