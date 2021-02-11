@@ -286,6 +286,10 @@ export default {
         value: '50',
         text: 'C code',
       },
+      {
+        value: '50',
+        text: 'JavaScript',
+      },
     ],
     ML: [
       {
@@ -322,8 +326,8 @@ export default {
         text: 'Data Viz',
       },
       {
-        value: '50',
-        text: 'Javascript (Vue.js)',
+        value: '60',
+        text: 'Vue.js',
       },
       {
         value: '50',
