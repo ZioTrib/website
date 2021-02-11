@@ -2,26 +2,27 @@
   <v-parallax
     :src="require('@/assets/background.png')"
     :height="750">
-    <v-row
-      style="margin-top: 5%"
-      justify="center"
-    >
+    <v-row justify="center"
+           style="margin-top: 5%">
       <v-col lg="8" md="9" sm="10" xs="10">
+        <div class="text-lg-h1 text-md-h1 text-h2 text-center black--text mb-10">
+          Let's keep in touch
+        </div>
       <v-card
-        color="rgb(255,255,255,0)"
+        elevation="10"
+        color="rgb(255,255,255,0.5)"
         class="card_id"
       >
-        <v-card-text
-          class="text-lg-h2 text-md-h2 text-h3"
+        <v-col cols="12"
+          class="text-left"
         >
-          Let's keep in touch
-        </v-card-text>
         <div
-          class="text-h5 font-weight-thin mt-10 mx-5"
+          class="text-h5 text-center font-weight-thin mt-10"
         >
           I'm looking for <strong> new opportunities </strong> and I am willing to <strong> accept any challenge </strong>. <br>
           If you are interested, my inbox is always open!
         </div>
+          <div class="text-center">
         <v-btn class="mx-2 my-10"
                rounded
                dark
@@ -48,6 +49,8 @@
           </v-icon>
           Send me a message
         </v-btn>
+          </div>
+        </v-col>
         <v-card-actions
           class="terziario justify-center">
           <v-btn
