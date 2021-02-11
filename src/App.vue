@@ -44,7 +44,6 @@
               color="terziario"
               text
               rounded
-              flat
               :to="item.root">
               <v-icon class=mr-2> {{ item.icon }}</v-icon>
               {{ item.title }}
@@ -56,9 +55,9 @@
         </v-toolbar-items>
       </v-row>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <router-view/>
-    </v-content>
+    </v-main>
 
 
     <v-footer
