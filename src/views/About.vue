@@ -7,14 +7,14 @@
       justify="center"
     >
     </v-row>
-      <v-row justify="center">
+    <v-row justify="center">
       <div class="text-lg-h1 text-md-h1 text-h2 black--text text-center">
         Resume
       </div>
     </v-row>
-<v-row
-  justify="center"
->
+    <v-row
+      justify="center"
+    >
 
       <v-col xl="6"
              lg="6"
@@ -33,62 +33,62 @@
           <v-row justify="center">
             <v-col
               v-for="item in AreaInterest"
-                            :key="item.icon"
-            cols="8">
-                <v-icon>
-                  {{item.icon}}
-                </v-icon>
-                <div class="my-2 text-center text-h6">
-                  {{item.title}}
-                </div>
-                <div class="mb-5 text-body-1">
-                  {{item.text}}
-                </div>
-              </v-col>
+              :key="item.icon"
+              cols="8">
+              <v-icon color="black">
+                {{ item.icon }}
+              </v-icon>
+              <div class="my-2 text-center text-h6">
+                {{ item.title }}
+              </div>
+              <div class="mb-5 text-body-1">
+                {{ item.text }}
+              </div>
+            </v-col>
           </v-row>
         </v-card>
 
         <div class="text-h4  mt-10 mb-7 black--text font-weight-thin text-left">
-        Experience
-      </div>
-    <v-card
-      v-for="item in experience"
-      :key="item.text"
-      color="rgb(255,255,255, 0.5)"
-      class="card_id mb-7"
-    >
-      <v-row>
-      <v-col
-        cols="11"
-        class="text-left mx-10 my-2"
-      >
-        <div class="text-h5 font-weight-bold">
-        {{ item.years }}
+          Experience
         </div>
-        <div class="text-body-1 my-2">
-          {{ item.jobPosition }}
-        </div>
-        <div class="text-body-2">
-          {{ item.company }}
+        <v-card
+          v-for="item in experience"
+          :key="item.text"
+          color="rgb(255,255,255, 0.5)"
+          class="card_id mb-7"
+        >
+          <v-row>
+            <v-col
+              cols="11"
+              class="text-left mx-10 my-2"
+            >
+              <div class="text-h5 font-weight-bold">
+                {{ item.years }}
+              </div>
+              <div class="text-body-1 my-2">
+                {{ item.jobPosition }}
+              </div>
+              <div class="text-body-2">
+                {{ item.company }}
 
-        </div>
-        <div class="text-body-2 font-weight-thin">
-        {{ item.place }}
-        </div>
+              </div>
+              <div class="text-body-2 font-weight-thin">
+                {{ item.place }}
+              </div>
 
-      </v-col>
-      <v-col
-        class="text-justify mx-10 my-2"
-      >
-        <div class="text-body-1">
-          {{ item.text}}
-        </div>
-      </v-col>
-      </v-row>
-    </v-card>
+            </v-col>
+            <v-col
+              class="text-justify mx-10 my-2"
+            >
+              <div class="text-body-1">
+                {{ item.text }}
+              </div>
+            </v-col>
+          </v-row>
+        </v-card>
         <div class="text-h4  mt-10 mb-7 black--text  font-weight-thin text-left">
-      Education
-    </div>
+          Education
+        </div>
         <v-card
           v-for="item in education"
           :key="item.text"
@@ -117,13 +117,13 @@
               class="text-left mx-10 my-2"
             >
               <div class="text-body-1 text-justify">
-                {{ item.text}}
+                {{ item.text }}
               </div>
               <div class="text-body mt-2 text-justify">
-                <strong> THESIS: </strong> <i> {{item.thesis}} </i>
+                <strong> THESIS: </strong> <i> {{ item.thesis }} </i>
               </div>
               <div class="text-body mt-2 text-justify">
-              {{item.thesis_des}}
+                {{ item.thesis_des }}
               </div>
             </v-col>
           </v-row>
@@ -136,118 +136,118 @@
           class="card_id mb-7"
         >
           <v-col>
-          <div class="text-h5 my-10  font-weight-bold">
-            <v-icon color="black">mdi-xml</v-icon>
-            Programming Languages
-          </div>
-          <v-row>
-            <v-col
-              content="center"
-              v-for="item in PL"
-              :key="item.text"
-            >
-              <div class="my-2 text-center text-button">
-                {{ item.text }}
-              </div>
-              <v-progress-circular
-                :rotate="-90"
-                :size="100"
-                :width="15"
-                :value="item.value"
-                color="terziario"
+            <div class="text-h5 my-10  font-weight-bold">
+              <v-icon color="black">mdi-xml</v-icon>
+              Programming Languages
+            </div>
+            <v-row>
+              <v-col
+                content="center"
+                v-for="item in PL"
+                :key="item.text"
               >
-                <div class="black--text text-button">
-                  {{ item.value }}%
+                <div class="my-2 text-center text-button">
+                  {{ item.text }}
                 </div>
-              </v-progress-circular>
-            </v-col>
-          </v-row>
-          <v-divider class="mt-4"></v-divider>
+                <v-progress-circular
+                  :rotate="-90"
+                  :size="100"
+                  :width="15"
+                  :value="item.value"
+                  color="terziario"
+                >
+                  <div class="black--text text-button">
+                    {{ item.value }}%
+                  </div>
+                </v-progress-circular>
+              </v-col>
+            </v-row>
+            <v-divider class="mt-4"></v-divider>
 
-          <div class="text-h5 my-10  font-weight-bold">
-            <v-icon color="black">mdi-brain</v-icon>
-            Machine Learning
-          </div>
-          <v-row>
-            <v-col
-              content="center"
-              v-for="item in ML"
-              :key="item.text"
-            >
-              <div class="my-2 text-center text-button">
-                {{ item.text }}
-              </div>
-              <v-progress-circular
-                :rotate="-90"
-                :size="100"
-                :width="15"
-                :value="item.value"
-                color="terziario"
+            <div class="text-h5 my-10  font-weight-bold">
+              <v-icon color="black">mdi-brain</v-icon>
+              Machine Learning
+            </div>
+            <v-row>
+              <v-col
+                content="center"
+                v-for="item in ML"
+                :key="item.text"
               >
-                <div class="black--text text-button">
-                  {{ item.value }}%
+                <div class="my-2 text-center text-button">
+                  {{ item.text }}
                 </div>
-              </v-progress-circular>
-            </v-col>
-          </v-row>
-          <v-divider class="mt-4"></v-divider>
+                <v-progress-circular
+                  :rotate="-90"
+                  :size="100"
+                  :width="15"
+                  :value="item.value"
+                  color="terziario"
+                >
+                  <div class="black--text text-button">
+                    {{ item.value }}%
+                  </div>
+                </v-progress-circular>
+              </v-col>
+            </v-row>
+            <v-divider class="mt-4"></v-divider>
 
-          <div class="text-h5  font-weight-bold my-10">
-            <v-icon color="black">mdi-database</v-icon>
-Data Analysis
-          </div>
-          <v-row>
-            <v-col
-              content="center"
-              v-for="item in DA"
-              :key="item.text"
-            >
-              <div class="my-2 text-center text-button">
-                {{ item.text }}
-              </div>
-              <v-progress-circular
-                :rotate="-90"
-                :size="100"
-                :width="15"
-                :value="item.value"
-                color="terziario"
+            <div class="text-h5  font-weight-bold my-10">
+              <v-icon color="black">mdi-database</v-icon>
+              Data Analysis
+            </div>
+            <v-row>
+              <v-col
+                content="center"
+                v-for="item in DA"
+                :key="item.text"
               >
-                <div class="black--text text-button">
-                  {{ item.value }}%
+                <div class="my-2 text-center text-button">
+                  {{ item.text }}
                 </div>
-              </v-progress-circular>
-            </v-col>
-          </v-row>
-          <v-divider class="mt-4"></v-divider>
-          <div class="text-h5 my-10  font-weight-bold">
-            <v-icon color="black">mdi-remote-desktop</v-icon>
-            Front End
-          </div>
-          <v-row>
-            <v-col
-              content="center"
-              v-for="item in FE"
-              :key="item.text"
-            >
-              <div class="my-2 text-center text-button">
-                {{ item.text }}
-              </div>
-              <v-progress-circular
-                :rotate="-90"
-                :size="100"
-                :width="15"
-                :value="item.value"
-                color="terziario"
+                <v-progress-circular
+                  :rotate="-90"
+                  :size="100"
+                  :width="15"
+                  :value="item.value"
+                  color="terziario"
+                >
+                  <div class="black--text text-button">
+                    {{ item.value }}%
+                  </div>
+                </v-progress-circular>
+              </v-col>
+            </v-row>
+            <v-divider class="mt-4"></v-divider>
+            <div class="text-h5 my-10  font-weight-bold">
+              <v-icon color="black">mdi-remote-desktop</v-icon>
+              Front End
+            </div>
+            <v-row>
+              <v-col
+                content="center"
+                v-for="item in FE"
+                :key="item.text"
               >
-                <div class="black--text text-button">
-                  {{ item.value }}%
+                <div class="my-2 text-center text-button">
+                  {{ item.text }}
                 </div>
-              </v-progress-circular>
-            </v-col>
-          </v-row>
+                <v-progress-circular
+                  :rotate="-90"
+                  :size="100"
+                  :width="15"
+                  :value="item.value"
+                  color="terziario"
+                >
+                  <div class="black--text text-button">
+                    {{ item.value }}%
+                  </div>
+                </v-progress-circular>
+              </v-col>
+            </v-row>
           </v-col>
         </v-card>
-    </v-col>
+      </v-col>
     </v-row>
   </v-parallax>
 </template>
@@ -256,10 +256,26 @@ Data Analysis
 export default {
   data: () => ({
     AreaInterest: [
-      {icon: 'mdi-chart-areaspline',title:"Data Analytics", text: "I love working with raw data to extract knowledge."},
-      {icon: 'mdi-brain', title:"Machine Learning",text: "Machine learning is more than copy and paste scikit-learn API code. I like the theory as well as the implementation."},
-      {icon: 'mdi-compass-outline',title:"Business Intelligence", text: "I like to make smart decisions using data."},
-      {icon: 'mdi-monitor-dashboard',title:"Data Visualization" ,text: "Good data analysis is nothing without good data visualization."}
+      {
+        icon: 'mdi-chart-areaspline',
+        title: "Data Analytics",
+        text: "I love working with raw data to extract knowledge."
+      },
+      {
+        icon: 'mdi-brain',
+        title: "Machine Learning",
+        text: "Machine learning is more than copy and paste scikit-learn API code. I like the theory as well as the implementation."
+      },
+      {
+        icon: 'mdi-compass-outline',
+        title: "Business Intelligence",
+        text: "I like to make smart and informed decisions using data."
+      },
+      {
+        icon: 'mdi-monitor-dashboard',
+        title: "Data Visualization",
+        text: "Good data analysis is nothing without good data visualization."
+      }
 
     ],
     experience: [
@@ -306,7 +322,7 @@ export default {
           'the business, management and administrative sphere. The specific training objectives can be summarized in ' +
           'the acquisition of skills in the areas, mathematics-statistics, economics, business-management, law.',
         thesis: "Data-Driven Decision making for organizational improvement: case FCA Cassino Plant.",
-        thesis_des:"The thesis aimed to identify a possible decision-making model to support the designation and" +
+        thesis_des: "The thesis aimed to identify a possible decision-making model to support the designation and" +
           " management of projects that allows the organization to achieve the objectives in efficiency."
       },
     ],
@@ -355,19 +371,19 @@ export default {
     ],
     FE:
       [
-      {
-        value: '80',
-        text: 'Data Viz',
-      },
-      {
-        value: '60',
-        text: 'Vue.js',
-      },
-      {
-        value: '50',
-        text: 'HTML & CSS',
-      },
-    ]
+        {
+          value: '80',
+          text: 'Data Viz',
+        },
+        {
+          value: '60',
+          text: 'Vue.js',
+        },
+        {
+          value: '50',
+          text: 'HTML & CSS',
+        },
+      ]
   }),
 
 }

@@ -112,9 +112,11 @@
             :class=
               "[`text-lg-body-1 text-justify text-md-body-1 text-body-1 ${color} mb-10`]">
 
-            I am a master student of <strong> Data Science and Business Informatics </strong> at the University of Pisa with a degree in
+            I am a master student of <strong> Data Science and Business Informatics </strong> at the University of Pisa
+            with a degree in
             <strong>Business Economics</strong> who believes in the <strong>power of data</strong> and how it can
-            improve the way we do things every day. I like to <strong>find solutions</strong> to problems, even if these are difficult.
+            improve the way we do things every day. I like to <strong>find solutions</strong> to problems, even if these
+            are difficult.
             I feel confident in everything I do and <strong>I love to learn</strong> something new every day.
 
 

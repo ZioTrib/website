@@ -4,7 +4,7 @@
     height="auto">
     <v-row
       style="margin-top: 5%"
-           justify="center"
+      justify="center"
     >
       <div class="text-lg-h1 text-md-h1 text-h2 text-center black--text mb-10">
         My Works
@@ -14,52 +14,52 @@
 
       justify="center">
       <v-col v-for="card in cards"
-      :key="card.title"
+             :key="card.title"
       >
-      <v-card
-        class="card_id mx-auto my-12"
-        color="rgb(255, 255, 255, 0.0)"
-        max-width="374"
-      >
-        <v-img
-          height="250"
-          :src="card.img"
-        ></v-img>
+        <v-card
+          class="card_id mx-auto my-12"
+          color="rgb(255, 255, 255, 0.0)"
+          max-width="374"
+        >
+          <v-img
+            height="250"
+            :src="card.img"
+          ></v-img>
 
-        <div class="text-h5 font-weight-bold ma-5">{{ card.title }}</div>
-        <v-chip>{{card.tag}}</v-chip>
+          <div class="text-h5 font-weight-bold ma-5">{{ card.title }}</div>
+          <v-chip>{{ card.tag }}</v-chip>
 
-        <v-card-text>
-          <div>{{card.text}}</div>
-        </v-card-text>
+          <v-card-text>
+            <div>{{ card.text }}</div>
+          </v-card-text>
 
-        <v-divider class="mx-4"></v-divider>
+          <v-divider class="mx-4"></v-divider>
 
-        <v-card-text>
-          <v-btn class="my-10 mx-5"
-                 rounded
-                 dark
-                 color="terziario"
-                 :href="card.report"
-                 target="_blank"
-                 large
-          >
-            Read the Report
-          </v-btn>
-          <v-btn class="my-10 mx-5"
-                 rounded
-                 color="terziario"
-                 :href="card.gitRepo"
-                 large
-                 icon
-          >
-            <v-icon>
-              mdi-github
-            </v-icon>
-          </v-btn>
+          <v-card-text>
+            <v-btn class="my-10 mx-5"
+                   rounded
+                   dark
+                   color="terziario"
+                   :href="card.report"
+                   target="_blank"
+                   large
+            >
+              Read the Report
+            </v-btn>
+            <v-btn class="my-10 mx-5"
+                   rounded
+                   color="terziario"
+                   :href="card.gitRepo"
+                   large
+                   icon
+            >
+              <v-icon>
+                mdi-github
+              </v-icon>
+            </v-btn>
 
-        </v-card-text>
-      </v-card>
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
   </v-parallax>
@@ -80,7 +80,7 @@ export default {
         tag: "Machine Learning",
       },
       {
-        title: "Airline Ticket Prenotation Database Design",
+        title: "Airline Ticket Booking Database Design",
         img: "https://img.cheapair.com/uploads/2016/02/whentobuy-e1455745258419.jpg",
         report: "https://github.com/ZioTrib/BD_project/blob/main/BD_project_report.pdf",
         gitRepo: "",
@@ -88,7 +88,7 @@ export default {
         text: ""
       },
       {
-        title: "Geological resources visualization in Italy",
+        title: "Geological Resources Visualization in Italy",
         img: "https://www.un-spider.org/sites/default/files/190401_italy%20edited.jpg",
         report: "https://github.com/ZioTrib/progetto_VA/blob/main/report/VA_project_report.pdf",
         gitRepo: "https://github.com/ZioTrib/progetto_VA",
@@ -112,7 +112,7 @@ export default {
         text: ""
       },
       {
-        title: "Carvana - Is a Bad buy?",
+        title: "Carvana - Is a Bad Buy?",
         img: "https://www.lautomobile.aci.it/fileadmin/_processed_/d/9/csm_carvana-dealer-store-vending-machine_6d338fe8b1.jpg",
         report: "https://github.com/ZioTrib/DM1-project/blob/main/DM1_Project.pdf",
         gitRepo: "https://github.com/ZioTrib/DM1-project",

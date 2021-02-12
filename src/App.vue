@@ -35,7 +35,7 @@
       <v-row
         align="center"
       >
-        <v-toolbar-title>Daniele Tribuzio</v-toolbar-title>
+        <v-toolbar-title class="text-h5 font-weight-thin ma-2">Daniele Tribuzio</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-col v-for="item in menu" :key="item.link"
@@ -67,10 +67,10 @@
       <v-row style="margin-top: 10px">
         <v-col
           xl="2"
-        lg="2"
-        md="6"
-        sm="5"
-        xs="5">
+          lg="2"
+          md="6"
+          sm="5"
+          xs="5">
           <div class="font-weight-thin black--text text-subtitle-2 text-center">
             <strong> Contact me </strong>
           </div>
@@ -81,7 +81,7 @@
             target="_blank">
             <v-icon size="20px">
               mdi-email-edit-outline
-           </v-icon>
+            </v-icon>
           </v-btn>
           <v-btn
             icon
@@ -125,7 +125,8 @@
             © {{ new Date().getFullYear() }} <strong> Daniele Tribuzio </strong> All rights reserved
           </div>
           <div class=" mt-2 font-weight-thin black--text text-subtitle-2 text-center">
-            This website is built entirely using the <strong> Vue.js framework</strong> and the <strong>Vuetify.js framework</strong>.
+            This website is built entirely using the <strong> Vue.js framework</strong> and the <strong>Vuetify.js
+            framework</strong>.
           </div>
           <v-icon>
             mdi-vuejs

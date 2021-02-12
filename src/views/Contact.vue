@@ -8,65 +8,66 @@
         <div class="text-lg-h1 text-md-h1 text-h2 text-center black--text mb-10">
           Let's keep in touch
         </div>
-      <v-card
-        elevation="10"
-        color="rgb(255,255,255,0.5)"
-        class="card_id"
-      >
-        <v-col cols="12"
-          class="text-left"
+        <v-card
+          elevation="10"
+          color="rgb(255,255,255,0.5)"
+          class="card_id"
         >
-        <div
-          class="text-h5 text-center font-weight-thin mt-10"
-        >
-          I'm looking for <strong> new opportunities </strong> and I am willing to <strong> accept any challenge </strong>. <br>
-          If you are interested, my inbox is always open!
-        </div>
-          <div class="text-center">
-        <v-btn class="mx-2 my-10"
-               rounded
-               dark
-               large
-               color="terziario"
-               href="mailto:Tribuzio.Daniele@gmail.com"
+          <v-col cols="12"
+                 class="text-left"
+          >
+            <div
+              class="text-h5 text-center font-weight-thin mt-10"
+            >
+              I'm looking for <strong> new opportunities </strong> and I am willing to <strong> accept any
+              challenge </strong>. <br>
+              If you are interested, my inbox is always open!
+            </div>
+            <div class="text-center">
+              <v-btn class="mx-2 my-10"
+                     rounded
+                     dark
+                     large
+                     color="terziario"
+                     href="mailto:Tribuzio.Daniele@gmail.com"
 
-        >
-          <v-icon class=mr-2>
-            mdi-email-edit-outline
-          </v-icon>
-          Send me an E-mail
-        </v-btn>
-        <v-btn class="mx-2 my-10"
-               rounded
-               large
-               dark
-               color="terziario"
-               href="https://t.me/DanieleTribuzio"
+              >
+                <v-icon class=mr-2>
+                  mdi-email-edit-outline
+                </v-icon>
+                Send me an E-mail
+              </v-btn>
+              <v-btn class="mx-2 my-10"
+                     rounded
+                     large
+                     dark
+                     color="terziario"
+                     href="https://t.me/DanieleTribuzio"
 
-        >
-          <v-icon class=mr-2>
-            mdi-telegram
-          </v-icon>
-          Send me a message
-        </v-btn>
-          </div>
-        </v-col>
-        <v-card-actions
-          class="terziario justify-center">
-          <v-btn
-            v-for="icon in icons"
-            :key="icon.icon"
-            :class="[`mx-${marginIcon} my-4`]"
-            icon
-            color="white"
-            :href="icon.link"
-            target="_blank">
-            <v-icon :size="sizeIcon">
-              {{ icon.icon }}
-            </v-icon>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+              >
+                <v-icon class=mr-2>
+                  mdi-telegram
+                </v-icon>
+                Send me a message
+              </v-btn>
+            </div>
+          </v-col>
+          <v-card-actions
+            class="terziario justify-center">
+            <v-btn
+              v-for="icon in icons"
+              :key="icon.icon"
+              :class="[`mx-${marginIcon} my-4`]"
+              icon
+              color="white"
+              :href="icon.link"
+              target="_blank">
+              <v-icon :size="sizeIcon">
+                {{ icon.icon }}
+              </v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
       </v-col>
     </v-row>
   </v-parallax>
@@ -75,7 +76,7 @@
 <script>
 /* eslint-disable vue/return-in-computed-property */
 export default {
-name: "Contact",
+  name: "Contact",
   data: () => ({
     icons: [
       {icon: 'mdi-instagram', link: "https://www.instagram.com/danieletribuzio/"},
@@ -86,7 +87,7 @@ name: "Contact",
     ],
   }),
   computed: {
-    sizeIcon () {
+    sizeIcon() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
           return '30px'
@@ -100,7 +101,7 @@ name: "Contact",
           return '40px'
       }
     },
-    marginIcon () {
+    marginIcon() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
           return '2'
