@@ -12,7 +12,7 @@
         xs="7"
         md="4">
         <v-card
-          color="rgb(255, 255, 255, 0.0)"
+          color="rgb(255, 255, 255, 0.5)"
           class="card_id"
           elevation="10">
           <v-row>
@@ -111,12 +111,13 @@
           <div
             :class=
               "[`text-lg-body-1 text-justify text-md-body-1 text-body-1 ${color} mb-10`]">
-            I'm a paragraph. Click here to add your own text and edit me.
-            It’s easy. Just click “Edit Text” or double click me to add your
-            own content and make changes to the font.
-            I'm a paragraph. Click here to add your own text and edit me.
-            It’s easy. Just click “Edit Text” or double click me to add your
-            own content and make changes to the font.
+
+            I am a master student of <strong> Data Science and Business Informatics </strong> at the University of Pisa with a degree in
+            <strong>Business Economics</strong> who believes in the <strong>power of data</strong> and how it can
+            improve the way we do things every day. I like to <strong>find solutions</strong> to problems, even if these are difficult.
+            I feel confident in everything I do and <strong>I love to learn</strong> something new every day.
+
+
           </div>
         </v-card>
       </v-col>
@@ -138,6 +139,7 @@ export default {
       {icon: 'mdi-github', link: "https://github.com/ZioTrib"}
 
     ],
+
   }),
   computed: {
     color() {
@@ -151,7 +153,7 @@ export default {
     height() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return '1000'
+          return '1200'
         case 'sm':
           return '1000'
         case 'md':
