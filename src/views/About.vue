@@ -6,6 +6,8 @@
       style="margin-top: 5%"
       justify="center"
     >
+    </v-row>
+      <v-row justify="center">
       <div class="text-lg-h1 text-md-h1 text-h2 black--text text-center">
         Resume
       </div>
@@ -21,7 +23,37 @@
              xs="11"
              center
       >
-      <div class="text-h4  mt-10 mb-7 black--text font-weight-thin text-left">
+        <div class="text-h4  mt-10 mb-7 black--text font-weight-thin text-left">
+          Area of Interest
+        </div>
+        <v-card
+          color="rgb(255,255,255, 0.5)"
+          class="card_id mb-7"
+        >
+          <v-row justify="center">
+            <v-col v-for="item in AreaInterest"
+                   :key="item.icon"
+                   xl="5"
+                   lg="5"
+                   md="5"
+                   sm="11"
+                   xs="11">
+              <div>
+                <v-icon>
+                  {{item.icon}}
+                </v-icon>
+                <div class="my-2 text-center text-h6">
+                  {{item.title}}
+                </div>
+                <div>
+                  {{item.text}}
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </v-card>
+
+        <div class="text-h4  mt-10 mb-7 black--text font-weight-thin text-left">
         Experience
       </div>
     <v-card
@@ -117,7 +149,7 @@
             <v-col
               content="center"
               v-for="item in PL"
-              :key="item.value"
+              :key="item.text"
             >
               <div class="my-2 text-center text-button">
                 {{ item.text }}
@@ -145,7 +177,7 @@
             <v-col
               content="center"
               v-for="item in ML"
-              :key="item.value"
+              :key="item.text"
             >
               <div class="my-2 text-center text-button">
                 {{ item.text }}
@@ -173,7 +205,7 @@ Data Analysis
             <v-col
               content="center"
               v-for="item in DA"
-              :key="item.value"
+              :key="item.text"
             >
               <div class="my-2 text-center text-button">
                 {{ item.text }}
@@ -200,7 +232,7 @@ Data Analysis
             <v-col
               content="center"
               v-for="item in FE"
-              :key="item.value"
+              :key="item.text"
             >
               <div class="my-2 text-center text-button">
                 {{ item.text }}
@@ -228,6 +260,13 @@ Data Analysis
 <script>
 export default {
   data: () => ({
+    AreaInterest: [
+      {icon: 'mdi-chart-areaspline',title:"Data Analytics", text: "I love working with raw data to extract knowledge"},
+      {icon: 'mdi-brain', title:"Machine Learning",text: "Machine learning is more than copy and paste scikit-learn API code. I like the theory as well as the implementation."},
+      {icon: 'mdi-compass-outline',title:"Business Intelligence", text: "i like to make smart decisions using data"},
+      {icon: 'mdi-monitor-dashboard',title:"Data Visualization" ,text: "good data analysis is nothing without good data visualization"}
+
+    ],
     experience: [
       {
         years: 'apr 2018 - ott 2018',
