@@ -31,25 +31,20 @@
           class="card_id mb-7"
         >
           <v-row justify="center">
-            <v-col v-for="item in AreaInterest"
-                   :key="item.icon"
-                   xl="5"
-                   lg="5"
-                   md="5"
-                   sm="11"
-                   xs="11">
-              <div>
+            <v-col
+              v-for="item in AreaInterest"
+                            :key="item.icon"
+            cols="8">
                 <v-icon>
                   {{item.icon}}
                 </v-icon>
                 <div class="my-2 text-center text-h6">
                   {{item.title}}
                 </div>
-                <div>
+                <div class="mb-5 text-body-1">
                   {{item.text}}
                 </div>
-              </div>
-            </v-col>
+              </v-col>
           </v-row>
         </v-card>
 
@@ -261,10 +256,10 @@ Data Analysis
 export default {
   data: () => ({
     AreaInterest: [
-      {icon: 'mdi-chart-areaspline',title:"Data Analytics", text: "I love working with raw data to extract knowledge"},
+      {icon: 'mdi-chart-areaspline',title:"Data Analytics", text: "I love working with raw data to extract knowledge."},
       {icon: 'mdi-brain', title:"Machine Learning",text: "Machine learning is more than copy and paste scikit-learn API code. I like the theory as well as the implementation."},
-      {icon: 'mdi-compass-outline',title:"Business Intelligence", text: "i like to make smart decisions using data"},
-      {icon: 'mdi-monitor-dashboard',title:"Data Visualization" ,text: "good data analysis is nothing without good data visualization"}
+      {icon: 'mdi-compass-outline',title:"Business Intelligence", text: "I like to make smart decisions using data."},
+      {icon: 'mdi-monitor-dashboard',title:"Data Visualization" ,text: "Good data analysis is nothing without good data visualization."}
 
     ],
     experience: [
