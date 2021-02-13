@@ -35,7 +35,7 @@
       <v-row
         align="center"
       >
-        <v-toolbar-title class="text-h5 font-weight-thin ma-2">Daniele Tribuzio</v-toolbar-title>
+        <v-toolbar-title class="text-h font-weight-thin ma-2">Daniele Tribuzio</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-col v-for="item in menu" :key="item.link"
