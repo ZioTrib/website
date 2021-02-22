@@ -13,32 +13,22 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import('../views/About.vue')
   },
   {
     path: '/contact',
     name: 'ContactMe',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+    component: () => import('../views/Contact.vue')
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Portfolio.vue')
+    component: () => import('../views/Portfolio.vue')
   },
   { path: '*',
     name: 'PageNotFound',
-    component: () => import(/* webpackChunkName: "about" */ '../views/PageNotFound.vue')
+    component: () => import('../views/PageNotFound.vue')
   }
-
 ]
 
 const router = new VueRouter({
@@ -48,3 +38,4 @@ const router = new VueRouter({
 })
 
 export default router
+
