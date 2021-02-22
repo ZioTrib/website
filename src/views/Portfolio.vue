@@ -112,7 +112,7 @@ export default {
         text: ""
       },
       {
-        title: "Carvana - Is a Bad Buy?",
+        title: "Carvana - Is It a Bad Buy?",
         img: "https://www.lautomobile.aci.it/fileadmin/_processed_/d/9/csm_carvana-dealer-store-vending-machine_6d338fe8b1.jpg",
         report: "https://github.com/ZioTrib/DM1-project/blob/main/DM1_Project.pdf",
         gitRepo: "https://github.com/ZioTrib/DM1-project",
