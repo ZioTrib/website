@@ -6,7 +6,7 @@
            style="margin-top: 5%">
       <v-col lg="8" md="9" sm="10" xs="10">
         <div class="text-lg-h1 text-md-h1 text-h2 text-center black--text mb-10">
-          Let's keep in touch
+          Let's get in touch
         </div>
         <v-card
           elevation="10"
