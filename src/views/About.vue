@@ -280,21 +280,21 @@ export default {
     ],
     experience: [
       {
-        years: 'apr 2018 - ott 2018',
+        years: 'apr 2018 - oct 2018',
         jobPosition: 'Cost Analysis Intern',
         company: 'FCA Fiat Chrysler Automobiles',
         place: 'Cassino (FR) - Alfa Romeo Plant',
         text: 'Cost Data Analysis Support for the identification of waste and production losses in order to improve the Business Organization.',
       },
       {
-        years: 'lug 2017 - mag 2018',
+        years: 'july 2017 - may 2018',
         jobPosition: 'Student Representative for the Economics and Law Departmental Council',
         company: 'University of Cassino',
         place: 'Cassino (FR)',
         text: 'Attendance at meetings of the Departmental Council to regulate the organisation and functions of the Department',
       },
       {
-        years: 'feb 2017 - mag 2017',
+        years: 'feb 2017 - may 2017',
         jobPosition: 'Employee',
         company: 'Poste Italiane',
         place: 'Fondi (LT)',
