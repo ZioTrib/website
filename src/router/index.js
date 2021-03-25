@@ -28,7 +28,7 @@ const routes = [
   { path: '*',
     name: 'PageNotFound',
     component: () => import('../views/PageNotFound.vue')
-  }
+  },
 ]
 
 const router = new VueRouter({

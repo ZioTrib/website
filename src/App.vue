@@ -25,6 +25,18 @@
               <v-list-item-title class="text-button text-left">{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+          <v-list-item
+              href="https://github.com/ZioTrib/cv/raw/main/CV_Tribuzio_Daniele.pdf"
+              link
+          >
+            <v-list-item-icon class="text-button text-center">
+              <v-icon>mdi-pdf-box</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title class="text-button text-left">Download CV</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -49,6 +61,16 @@
               {{ item.title }}
             </v-btn>
           </v-col>
+          <v-col>
+          <v-btn
+              dark
+              color="terziario"
+              rounded
+          href="https://github.com/ZioTrib/cv/raw/main/CV_Tribuzio_Daniele.pdf">
+            <v-icon class=mr-2>mdi-pdf-box</v-icon>
+            Download CV
+          </v-btn>
+          </v-col>
         </v-toolbar-items>
         <v-toolbar-items class="hidden-md-and-up">
           <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -65,6 +87,7 @@
       color="white"
     >
       <v-row style="margin-top: 10px">
+        <v-spacer class="hidden-sm-and-down"></v-spacer>
         <v-col
           xl="2"
           lg="2"
@@ -94,7 +117,7 @@
             </v-icon>
           </v-btn>
         </v-col>
-        <v-spacer class="hidden-sm-and-down"></v-spacer>
+<!--        <v-spacer class="hidden-sm-and-down"></v-spacer>-->
         <v-col
           xl="2"
           lg="2"
@@ -117,14 +140,14 @@
             </v-icon>
           </v-btn>
         </v-col>
-        <v-col
+<!--        <v-col
           class="text-center"
           cols="12"
         >
-          <div class="font-weight-thin black--text text-subtitle-2 text-center">
+          <div class="font-weight-thin black&#45;&#45;text text-subtitle-2 text-center">
             © {{ new Date().getFullYear() }} <strong> Daniele Tribuzio </strong> All rights reserved
           </div>
-          <div class=" mt-2 font-weight-thin black--text text-subtitle-2 text-center">
+          <div class=" mt-2 font-weight-thin black&#45;&#45;text text-subtitle-2 text-center">
             This website is built entirely using the <strong> Vue.js framework</strong> and the <strong>Vuetify.js
             framework</strong>.
           </div>
@@ -134,7 +157,8 @@
           <v-icon>
             mdi-vuetify
           </v-icon>
-        </v-col>
+        </v-col>-->
+        <v-spacer class="hidden-sm-and-down"></v-spacer>
       </v-row>
     </v-footer>
   </v-app>
